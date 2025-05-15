@@ -14,3 +14,7 @@ Since the subscriber also has the same url, this means that both the subscriber 
 ## Cargo run on both subscriber and publisher
 ![CargoRun](assets/CargoRun.png)
 When the publisher is ran, messages are sent to the message broker, which is RabbitMQ in this case, which is then redirected to the subscriber and then shown in the subscriber terminal log. Since there are 5 message tranmission from publisher due to how it was setup, each of the message sent would be shown on the subscriber terminal log as separate responses, thus the 5 different lines on the subscriber log shown in the image.
+
+## RabbitMQ Graph after running Cargo Run on Publisher
+![RabbitMQCargoRun](assets/RabbitCargoRun.png)
+The spike shown in the image is generated onto the graph each time an instance of the publisher is run. Since we are sending messages without queueing, the rate of the message is shown on the message rates graph, thus the spike.
