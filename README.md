@@ -18,3 +18,7 @@ When the publisher is ran, messages are sent to the message broker, which is Rab
 ## RabbitMQ Graph after running Cargo Run on Publisher
 ![RabbitMQCargoRun](assets/RabbitCargoRun.png)
 The spike shown in the image is generated onto the graph each time an instance of the publisher is run. Since we are sending messages without queueing, the rate of the message is shown on the message rates graph, thus the spike.
+
+## Slow Subscriber Graph Representation
+![Slow Subscriber](assets/SlowSubscriber.png)
+The metrics beside the queue message graph shows 35, which is the number of queued messages as I made the message requests. This is because I ran `cargo run` 7 times quickly thus causing the messages to be queue, with each run request queueing 5 messages. 
